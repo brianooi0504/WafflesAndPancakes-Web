@@ -8,34 +8,11 @@
 </head>
 
 <body>
-
-    <?php
-        session_start();
-    ?>
-
     <header>
         <div class="headercontainer">
             <div class="logo">
                 <a href="index.php"><img src="images/MainLogo.png" alt="WAP Logo"></a>
             </div>
-
-            <?php
-                if (isset($_SESSION["email"])){
-                    echo '<div class="account">';
-                    echo '<a href="db/logout.php" class="button">Logout</a>';
-                    echo "</div>";
-                    echo '<div class="account">';
-                    echo "<a href='nothinghere.php' class='button'>My orders</a>";
-                    echo "</div>";
-                }
-                else{
-                    echo '<div class="account">';
-                    echo '<a href="login&signup.php" class="button">Login or SignUp!</a>';
-                    echo "</div>";
-                }
-
-            ?>
-
         </div>
 
         <nav>
@@ -102,9 +79,14 @@
         </div>
     </main>
     
-    <?php
-        include_once 'footer.html';
-    ?>
+    <footer class="footer">
+        <ul class="ul_nav">
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="nothinghere.php">Careers</a></li>
+            <li><a href="whoweare.php">Who We are</a></li>
+        </ul>
+        &copy; 2020 Waffles And Pancakes Inc. All rights reserved
+    </footer>
     
     </body>
     
